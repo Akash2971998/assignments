@@ -1,22 +1,25 @@
-#include<stdio.h>
-#include<string.h>
-
-
+#include <string.h>
+#include<stdlib.h>
+ 
 int main()
 {
-    char a[20],b[20];
-    
-    printf("\nEnter the string you want to check: ");
-    gets(a);
-    
-    strcpy(b,a);
-    strrev(b);
-    
-    if(strcmp(b,a)!=0)
-        printf("\nString is not pallindrome");
+    char s[20];  
+    int i,n,count=0;
+ 
+    printf("Enter  the string : ");
+    gets(s);
+    n=strlen(s);
+ 
+    for(i=0;i<n/2;i++)  
+    {
+    	if(s[i]==s[n-i-1])
+    	count++;
+   	}
+  
+ 	  if(count==i)
+ 	    printf("string is palindrome");
     else
-        printf("\nString is pallindrome");
-    
-    
+      printf("string is not palindrome");
+ 	      
     return 0;
 }
